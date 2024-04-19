@@ -85,3 +85,22 @@
 }
 
 
+@media screen and (max-width: 768px) {
+    /* Appliquer des styles lorsque la largeur de l'écran est inférieure ou égale à 768px */
+    .column.left {
+        /* Ajouter un padding autour du contenu */
+        padding: 10px;
+        
+    }
+
+    /* Réduire la taille du titre */
+    .title {
+        font-size: 24px;
+    }
+
+    /* Réduire la taille du paragraphe */
+    #b {
+        font-size: 16px;
+        width: 20vh;
+    }
+}

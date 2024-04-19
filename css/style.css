@@ -18,10 +18,9 @@ html, body{
 body{
     background: linear-gradient(to right, #001f3f, #000000);
     scroll-behavior: smooth;
-
-
-
 }
+
+
 .header_area .main-menu .navbar .navbar-brand{
     padding: 0 2rem 0 5rem;
 }
@@ -200,6 +199,9 @@ h2{
     border-radius: 10px;
     overflow: hidden;
   }
+  .contactButton a{
+    color: white;
+  }
   
   .button, .button__icon, .button__text {
     transition: all 0.3s;
@@ -255,12 +257,18 @@ h2{
 
 /* Banner */
 .bane {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1000px; /* Ajustez la largeur maximale selon vos besoins */
-    padding: 30px;
-  }
-  
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1000px; /* Ajustez la largeur maximale selon vos besoins */
+  padding: 30px;
+}
+
+.bane-image {
+  width: 100%; /* La largeur de l'image prendra 100% de la largeur de son conteneur */
+  height: auto; /* La hauteur de l'image s'ajustera automatiquement en conservant le ratio d'aspect */
+  display: block; /* Assurez-vous que l'image est affichée en tant que bloc */
+}
+
 
 
 
@@ -273,17 +281,13 @@ h2{
 
 
 
-.container{
-    display: flex;
-    
-}
 
 .card {
   position: relative;
   width: calc(25% - 60px); /* Utilisation de calc() pour calculer la largeur en pourcentage avec un espace entre les cartes */
-  min-width: 200px; /* Largeur minimale pour éviter que les cartes ne deviennent trop petites */
-  max-width: 300px; /* Largeur maximale pour limiter la taille des cartes sur les écrans plus larges */
-  height: auto; /* Hauteur automatique pour s'adapter au contenu */
+  width: 300px; /* Largeur minimale pour éviter que les cartes ne deviennent trop petites */
+   /* Largeur maximale pour limiter la taille des cartes sur les écrans plus larges */
+  height: 350px; /* Hauteur automatique pour s'adapter au contenu */
   background-color: #000;
   display: flex;
   flex-direction: column;
@@ -302,8 +306,8 @@ h2{
     inset: 0;
     left: -5px;
     margin: auto;
-    width: 200px;
-    height: 204px;
+    width: 100px;
+    height: 104px;
     border-radius: 10px;
     background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
     z-index: -10;
@@ -332,8 +336,8 @@ h2{
 }
 
 .card p:last-child {
-    color: #e81cff;
-    font-weight: 600;
+    color: grey;
+    font-weight: bold;
     font-size: 0.875em; /* Taille de police relative */
 }
 
@@ -366,6 +370,14 @@ h2{
 
 
 
+   .small-icon {
+      width: 32px; /* Taille des petites icônes */
+      height: 32px;
+      filter: brightness(0) invert(1); /* Pour colorer en blanc */
+      margin: auto;
+   }
+
+
 
 
 
@@ -377,10 +389,10 @@ h2{
 .card-2 {
   position: relative;
   width: calc(25% - 60px); /* Utilisation de calc() pour calculer la largeur en pourcentage avec un espace entre les cartes */
-  min-width: 200px; /* Largeur minimale pour éviter que les cartes ne deviennent trop petites */
+  min-width: 340px; /* Largeur minimale pour éviter que les cartes ne deviennent trop petites */
   max-width: 300px; /* Largeur maximale pour limiter la taille des cartes sur les écrans plus larges */
   height: auto; /* Hauteur automatique pour s'adapter au contenu */
-  background-color: #000;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   justify-content: flex-end; /* Alignement du contenu en bas */
@@ -388,8 +400,13 @@ h2{
   gap: 12px;
   border-radius: 8px;
   cursor: pointer;
-  margin: 30px;
+  margin: 25px;
   font-size: 16px;
+}
+
+.card-2 img{
+  width: 320px;
+  height: 180px;
 }
   .recents{
     text-align: center;
@@ -605,6 +622,11 @@ h2{
     flex-direction: column;
     
   }
+  .form .descr{
+    color: #d9534f;
+    font-size: 1.2em;
+    font-family: var(--roboto--Bold);
+  }
   
   .input, textarea {
     margin: 1em 0 1em 0;
@@ -707,7 +729,7 @@ footer.footer-area .social h5{
 footer.footer-area .social a > i{
     font-size:22px;
     padding: 2rem;
-    color: var(--border-color);
+    color: #d9534f;
 }
 
 footer.footer-area .social a:hover > i{
